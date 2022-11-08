@@ -16,3 +16,7 @@ jobs:
           submodules: recursive
       - name: Build APKs
         run: bash build.sh
+      - name: Upload APKs
+        uses: actions/upload-artifact@v3
+        with:
+          path: protonmail*.apk
